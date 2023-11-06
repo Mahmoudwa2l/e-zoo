@@ -1,0 +1,14 @@
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\bin\Debug\net7.0-windows\MyWinFormsApp.exe
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\bin\Debug\net7.0-windows\MyWinFormsApp.deps.json
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\bin\Debug\net7.0-windows\MyWinFormsApp.runtimeconfig.json
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\bin\Debug\net7.0-windows\MyWinFormsApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\bin\Debug\net7.0-windows\MyWinFormsApp.pdb
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.AssemblyInfoInputs.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.AssemblyInfo.cs
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\refint\MyWinFormsApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.pdb
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\MyWinFormsApp.genruntimeconfig.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyWinFormsApp\obj\Debug\net7.0-windows\ref\MyWinFormsApp.dll
