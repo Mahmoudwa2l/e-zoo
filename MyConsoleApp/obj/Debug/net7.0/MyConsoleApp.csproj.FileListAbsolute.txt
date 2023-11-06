@@ -1,0 +1,14 @@
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\bin\Debug\net7.0\MyConsoleApp.exe
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\bin\Debug\net7.0\MyConsoleApp.deps.json
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\bin\Debug\net7.0\MyConsoleApp.runtimeconfig.json
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\bin\Debug\net7.0\MyConsoleApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\bin\Debug\net7.0\MyConsoleApp.pdb
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.AssemblyInfoInputs.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.AssemblyInfo.cs
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\refint\MyConsoleApp.dll
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.pdb
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\MyConsoleApp.genruntimeconfig.cache
+C:\Users\mahmo\Downloads\Lab_Ass1\e-zoo\MyConsoleApp\obj\Debug\net7.0\ref\MyConsoleApp.dll
