@@ -1,0 +1,15 @@
+A:\e-zoo\client\SocketClient\bin\Debug\net7.0-windows\SocketClient.exe
+A:\e-zoo\client\SocketClient\bin\Debug\net7.0-windows\SocketClient.deps.json
+A:\e-zoo\client\SocketClient\bin\Debug\net7.0-windows\SocketClient.runtimeconfig.json
+A:\e-zoo\client\SocketClient\bin\Debug\net7.0-windows\SocketClient.dll
+A:\e-zoo\client\SocketClient\bin\Debug\net7.0-windows\SocketClient.pdb
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.csproj.AssemblyReference.cache
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.GeneratedMSBuildEditorConfig.editorconfig
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.AssemblyInfoInputs.cache
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.AssemblyInfo.cs
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.csproj.CoreCompileInputs.cache
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.dll
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\refint\SocketClient.dll
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.pdb
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\SocketClient.genruntimeconfig.cache
+A:\e-zoo\client\SocketClient\obj\Debug\net7.0-windows\ref\SocketClient.dll
