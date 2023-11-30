@@ -1,60 +1,88 @@
-using System;
-using System.Windows.Forms;
-using System.Collection.Generic;
+﻿using System;
+using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
-using System.Net;
-using System.Net.Socket;
-using SocketClient;
 
 namespace SocketClient
 {
-
-
-class Program
-    {
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            // Create and show the form
-            Application.Run(new Form1());
-        }
-    }
     class ClientC
     {
-        int byteCount;
-        NetworkStream stream;
-        byte[] sendData;
-        TcpClient tcpClient;
+        NetworkStream? stream;
+        TcpClient? tcpClient;
 
-        public bool connectToSocket(string host , int portNumber)
+        public bool ConnectToSocket(string host, int portNumber)
         {
             try
             {
-                tcpClient = new TcpClient(host , portNumber);
+                tcpClient = new TcpClient(host, portNumber);
                 stream = tcpClient.GetStream();
-                console.WriteLine("Connecting Made ! with " + host );
+                Console.WriteLine("Connection Made! with " + host);
                 return true;
             }
-            catch
+            catch (System.Net.Sockets.SocketException e)
             {
-                console.WriteLine("connection Failed : "+ e);
+                Console.WriteLine("Connection Failed: " + e);
                 return false;
             }
         }
 
-    }
-
-    class MyForm : Form
-    {
-        public MyForm()
+        public bool ReceiveMessage()
         {
-            // Add controls or customize your form here if needed
-            Text = "Hello, World!";
-            MessageBox.Show("Hello, World!");
+            try
+            {
+                if (stream != null)
+                {
+                    byte[] receiveBuffer = new byte[1024];
+                    int bytesReceived = stream.Read(receiveBuffer, 0, receiveBuffer.Length);
+
+                    if (bytesReceived > 0)
+                    {
+                        string data = Encoding.UTF8.GetString(receiveBuffer, 0, bytesReceived);
+                        string[] points = data.Split(",");
+                        for (int i = 0; i < points.Length; i++)
+                        {
+                            Console.WriteLine(points[i]);
+                        }
+                    }
+
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Connection not initialized.");
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error receiving message: " + e);
+                return false;
+            }
+        }
+
+        public bool CloseConnection()
+        {
+            if (stream != null)
+            {
+                stream.Close();
+            }
+
+            if (tcpClient != null)
+            {
+                tcpClient.Close();
+            }
+
+            Console.WriteLine("Connection terminated.");
+            return true;
+        }
+
+        static void Main(string[] args)
+        {
+            ClientC c = new ClientC();
+            if (c.ConnectToSocket("localhost", 5000))
+            {
+                c.ReceiveMessage();
+                c.CloseConnection();
+            }
         }
     }
 }
