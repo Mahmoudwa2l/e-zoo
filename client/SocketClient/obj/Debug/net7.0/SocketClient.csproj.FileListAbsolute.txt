@@ -27,3 +27,4 @@ D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\refint\SocketClient.dll
 D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.pdb
 D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.genruntimeconfig.cache
 D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\ref\SocketClient.dll
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.sourcelink.json
