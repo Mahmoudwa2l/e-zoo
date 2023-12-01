@@ -1,0 +1,14 @@
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.GeneratedMSBuildEditorConfig.editorconfig
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.AssemblyInfoInputs.cache
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.AssemblyInfo.cs
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.csproj.CoreCompileInputs.cache
+D:\ezoo\e-zoo\TUIO\bin\Debug\net7.0-windows\TUIO.exe
+D:\ezoo\e-zoo\TUIO\bin\Debug\net7.0-windows\TUIO.deps.json
+D:\ezoo\e-zoo\TUIO\bin\Debug\net7.0-windows\TUIO.runtimeconfig.json
+D:\ezoo\e-zoo\TUIO\bin\Debug\net7.0-windows\TUIO.dll
+D:\ezoo\e-zoo\TUIO\bin\Debug\net7.0-windows\TUIO.pdb
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.dll
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\refint\TUIO.dll
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.pdb
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\TUIO.genruntimeconfig.cache
+D:\ezoo\e-zoo\TUIO\obj\Debug\net7.0-windows\ref\TUIO.dll

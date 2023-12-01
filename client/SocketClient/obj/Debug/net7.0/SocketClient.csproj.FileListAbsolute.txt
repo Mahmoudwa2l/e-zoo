@@ -13,3 +13,17 @@ A:\e-zoo\client\SocketClient\obj\Debug\net7.0\refint\SocketClient.dll
 A:\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.pdb
 A:\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.genruntimeconfig.cache
 A:\e-zoo\client\SocketClient\obj\Debug\net7.0\ref\SocketClient.dll
+D:\ezoo\e-zoo\client\SocketClient\bin\Debug\net7.0\SocketClient.exe
+D:\ezoo\e-zoo\client\SocketClient\bin\Debug\net7.0\SocketClient.deps.json
+D:\ezoo\e-zoo\client\SocketClient\bin\Debug\net7.0\SocketClient.runtimeconfig.json
+D:\ezoo\e-zoo\client\SocketClient\bin\Debug\net7.0\SocketClient.dll
+D:\ezoo\e-zoo\client\SocketClient\bin\Debug\net7.0\SocketClient.pdb
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.AssemblyInfoInputs.cache
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.AssemblyInfo.cs
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.csproj.CoreCompileInputs.cache
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.dll
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\refint\SocketClient.dll
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.pdb
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\SocketClient.genruntimeconfig.cache
+D:\ezoo\e-zoo\client\SocketClient\obj\Debug\net7.0\ref\SocketClient.dll
