@@ -276,6 +276,8 @@ using TUIO;
 			}
 			
 			TuioDemo app = new TuioDemo(port);
+		//hello
 			Application.Run(app);
-		}
+
+	}
 	}

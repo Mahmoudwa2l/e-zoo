@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fQCdjhwvWUM/bAaCCI6IBoVoSpftoNEihDVroEjrwVQC5TBaSQ+URVTn3JHEn+AolurFBGGJjm6IpUznPDhMLA==",
+  "dgSpecHash": "80G58zAHLLnxRrZtefZsLQccuonU/+D/3EDGfHH0qYEwsIOrwLJjhdQkHbmKHRF0ouG5h2g4yQt2bF+6Whl/Uw==",
   "success": true,
-  "projectFilePath": "D:\\ezoo\\e-zoo\\client\\SocketClient\\SocketClient.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Documents\\GitHub\\e-zoo\\client\\SocketClient\\SocketClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
