@@ -46,7 +46,7 @@ using TUIO;
 
 		Font font = new Font("Arial", 10.0f);
 		SolidBrush fntBrush = new SolidBrush(Color.White);
-		SolidBrush bgrBrush = new SolidBrush(Color.FromArgb(0,0,64));
+		SolidBrush bgrBrush = new SolidBrush(Color.Black);
 		SolidBrush curBrush = new SolidBrush(Color.FromArgb(192, 0, 192));
 		SolidBrush objBrush = new SolidBrush(Color.FromArgb(64, 0, 0));
 		SolidBrush blbBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
