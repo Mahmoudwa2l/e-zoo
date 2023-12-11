@@ -32,6 +32,7 @@ public class TuioDemo : Form, TuioListener
     private Dictionary<long, TuioObject> objectList;
     private Dictionary<long, TuioCursor> cursorList;
     private Dictionary<long, TuioBlob> blobList;
+    private Dictionary<int, Image> symbolImageMap;
 
     public static int width, height;
     private int window_width = 640;
@@ -74,11 +75,24 @@ public class TuioDemo : Form, TuioListener
         objectList = new Dictionary<long, TuioObject>(128);
         cursorList = new Dictionary<long, TuioCursor>(128);
         blobList = new Dictionary<long, TuioBlob>(128);
+        // Initialize the symbolImageMap
+        symbolImageMap = new Dictionary<int, Image>();
+
+        // Load PNG images and associate them with SymbolIDs
+        LoadSymbolImages();
 
         client = new TuioClient(port);
         client.addTuioListener(this);
 
         client.connect();
+    }
+    private void LoadSymbolImages()
+    {
+        // Load PNG images and associate them with SymbolIDs
+        //Example:
+        symbolImageMap.Add(1, Image.FromFile("./images/alligator.png"));
+        //symbolImageMap.Add(2, Image.FromFile("symbol2.png"));
+        // ... Add more images as needed
     }
 
     private void Form_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -256,8 +270,19 @@ public class TuioDemo : Form, TuioListener
                     g.TranslateTransform(ox, oy);
                     g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
                     g.TranslateTransform(-ox, -oy);
+                    // Draw the PNG image based on SymbolID
+                    if (symbolImageMap.ContainsKey(tobj.SymbolID))
+                    {
+                        g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                    }
+                    else
+                    {
+                        // Fallback to drawing a rectangle if no image is found
+                        g.FillRectangle(objBrush, new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                    }
 
-                    g.FillRectangle(objBrush, new Rectangle(ox - size / 2, oy - size / 2, size, size));
+
+                    //g.FillRectangle(objBrush, new Rectangle(ox - size / 2, oy - size / 2, size, size));
 
                     g.TranslateTransform(ox, oy);
                     g.RotateTransform(-1 * (float)(tobj.Angle / Math.PI * 180.0f));
