@@ -237,8 +237,10 @@ public class TuioDemo : Form, TuioListener
     protected override void OnPaintBackground(PaintEventArgs pevent)
     {
         // Getting the graphics object
+        Pen borderPen = new Pen(Color.Red, 2);
         Graphics g = pevent.Graphics;
-        g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+        g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));    
+        g.DrawRectangle(borderPen, 100, 100, 100, 100);
 
         // draw the cursor path
         if (cursorList.Count > 0)
