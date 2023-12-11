@@ -46,7 +46,7 @@ public class TuioDemo : Form, TuioListener
 
     Font font = new Font("Arial", 10.0f);
     SolidBrush fntBrush = new SolidBrush(Color.White);
-    SolidBrush bgrBrush = new SolidBrush(Color.White);
+    SolidBrush bgrBrush = new SolidBrush(Color.FromArgb(0, 0, 64));
     SolidBrush curBrush = new SolidBrush(Color.FromArgb(192, 0, 192));
     SolidBrush objBrush = new SolidBrush(Color.FromArgb(64, 0, 0));
     SolidBrush blbBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
@@ -61,8 +61,8 @@ public class TuioDemo : Form, TuioListener
         height = window_height;
 
         this.ClientSize = new System.Drawing.Size(width, height);
-        this.Name = "E-zoo";
-        this.Text = "E-zoo";
+        this.Name = "TuioDemo";
+        this.Text = "TuioDemo";
 
         this.Closing += new CancelEventHandler(Form_Closing);
         this.KeyDown += new KeyEventHandler(Form_KeyDown);
