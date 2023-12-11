@@ -40,6 +40,7 @@ public class TuioDemo : Form, TuioListener
     // Static variables for the window width and height
     public static int width, height;
 
+<<<<<<< Updated upstream
     // Variables for window and screen dimensions
     private int window_width = 640;
     private int window_height = 480;
@@ -51,6 +52,41 @@ public class TuioDemo : Form, TuioListener
     // Boolean flags for fullscreen and verbosity
     private bool fullscreen;
     private bool verbose;
+=======
+		Font font = new Font("Arial", 10.0f);
+		SolidBrush fntBrush = new SolidBrush(Color.White);
+		SolidBrush bgrBrush = new SolidBrush(Color.FromArgb(0,0,64));
+		SolidBrush curBrush = new SolidBrush(Color.FromArgb(192, 0, 192));
+		SolidBrush objBrush = new SolidBrush(Color.FromArgb(64, 0, 0));
+		SolidBrush blbBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
+		Pen curPen = new Pen(new SolidBrush(Color.Blue), 1);
+		//private Image LoadImageForSymbolID(int symbolID)
+		//{
+		//	// Assuming the images are named "lion.png", "image_2.png", etc.
+		//	string imageName = $"image_{symbolID}.png";
+		//	string imagePath = Path.Combine("images", imageName);
+
+		//	try
+		//	{
+		//		return Image.FromFile(imagePath);
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		// Handle exceptions, e.g., image not found
+		//		Console.WriteLine($"Error loading image for SymbolID {symbolID}: {ex.Message}");
+		//		return null; // or return a default image
+		//	}
+		//}
+
+
+
+    public TuioDemo(int port) {
+		
+			verbose = false;
+			fullscreen = false;
+			width = window_width;
+			height = window_height;
+>>>>>>> Stashed changes
 
     // Fonts and brushes for rendering
     Font font = new Font("Arial", 10.0f);
@@ -297,6 +333,7 @@ public class TuioDemo : Form, TuioListener
                     g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
                     g.TranslateTransform(-ox, -oy);
 
+<<<<<<< Updated upstream
                     g.FillRectangle(objBrush, new Rectangle(ox - size / 2, oy - size / 2, size, size));
 
                     g.TranslateTransform(ox, oy);
@@ -325,6 +362,77 @@ public class TuioDemo : Form, TuioListener
                     g.TranslateTransform(-bx, -by);
 
                     g.FillEllipse(blbBrush, bx - bw / 2, by - bh / 2, bw, bh);
+=======
+		draw the objects
+
+		if (objectList.Count > 0)
+		{
+			lock (objectList)
+			{
+				foreach (TuioObject tobj in objectList.Values)
+				{
+					int ox = tobj.getScreenX(width);
+					int oy = tobj.getScreenY(height);
+					int size = height / 10;
+
+					g.TranslateTransform(ox, oy);
+					g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
+					g.TranslateTransform(-ox, -oy);
+
+					g.FillRectangle(objBrush, new Rectangle(ox - size / 2, oy - size / 2, size, size));
+
+					g.TranslateTransform(ox, oy);
+					g.RotateTransform(-1 * (float)(tobj.Angle / Math.PI * 180.0f));
+					g.TranslateTransform(-ox, -oy);
+
+					g.DrawString(tobj.SymbolID + "", font, fntBrush, new PointF(ox - 10, oy - 10));
+				}
+			}
+		}
+
+		draw the objects
+		draw the objects
+
+		//if (objectList.Count > 0)
+  //      {
+  //          lock (objectList)
+  //          {
+  //              foreach (TuioObject tobj in objectList.Values)
+  //              {
+  //                  int ox = tobj.getScreenX(width);
+  //                  int oy = tobj.getScreenY(height);
+  //                  int size = height / 10;
+
+  //                  g.TranslateTransform(ox, oy);
+  //                  g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
+  //                  g.TranslateTransform(-ox, -oy);
+
+  //                  // Load the image based on SymbolID
+  //                  Image objImage = LoadImageForSymbolID(tobj.SymbolID);
+
+  //                  // Draw the image instead of a rectangle
+  //                  g.DrawImage(objImage, new Rectangle(ox - size / 2, oy - size / 2, size, size));
+
+  //                  g.TranslateTransform(ox, oy);
+  //                  g.RotateTransform(-1 * (float)(tobj.Angle / Math.PI * 180.0f));
+  //                  g.TranslateTransform(-ox, -oy);
+
+  //                  g.DrawString(tobj.SymbolID + "", font, fntBrush, new PointF(ox - 10, oy - 10));
+  //              }
+  //          }
+  //      }
+
+
+
+        // draw the blobs
+        if (blobList.Count > 0) {
+				lock(blobList) {
+					foreach (TuioBlob tblb in blobList.Values) {
+						int bx = tblb.getScreenX(width);
+						int by = tblb.getScreenY(height);
+						float bw = tblb.Width*width;
+						float bh = tblb.Height*height;
+>>>>>>> Stashed changes
 
                     g.TranslateTransform(bx, by);
                     g.RotateTransform(-1 * (float)(tblb.Angle / Math.PI * 180.0f));
