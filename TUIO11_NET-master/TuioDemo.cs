@@ -47,7 +47,11 @@ public class TuioDemo : Form, TuioListener
 
     Font font = new Font("Arial", 10.0f);
     SolidBrush fntBrush = new SolidBrush(Color.White);
+<<<<<<< HEAD
     SolidBrush bgrBrush = new SolidBrush(Color.Wheat);
+=======
+    SolidBrush bgrBrush = new SolidBrush(Color.FromArgb(0, 0, 64));
+>>>>>>> 16821863a60083d6367790768d3ae94cf8c266f0
     SolidBrush curBrush = new SolidBrush(Color.FromArgb(192, 0, 192));
     SolidBrush objBrush = new SolidBrush(Color.FromArgb(64, 0, 0));
     SolidBrush blbBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
