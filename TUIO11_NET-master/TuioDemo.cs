@@ -47,7 +47,7 @@ public class TuioDemo : Form, TuioListener
 
     Font font = new Font("Arial", 10.0f);
     SolidBrush fntBrush = new SolidBrush(Color.White);
-    SolidBrush bgrBrush = new SolidBrush(Color.White);
+    SolidBrush bgrBrush = new SolidBrush(Color.Wheat);
     SolidBrush curBrush = new SolidBrush(Color.FromArgb(192, 0, 192));
     SolidBrush objBrush = new SolidBrush(Color.FromArgb(64, 0, 0));
     SolidBrush blbBrush = new SolidBrush(Color.FromArgb(64, 64, 64));
@@ -62,8 +62,8 @@ public class TuioDemo : Form, TuioListener
         height = window_height;
 
         this.ClientSize = new System.Drawing.Size(width, height);
-        this.Name = "E-zoo";
-        this.Text = "E-zoo";
+        this.Name = "TuioDemo";
+        this.Text = "TuioDemo";
 
         this.Closing += new CancelEventHandler(Form_Closing);
         this.KeyDown += new KeyEventHandler(Form_KeyDown);
@@ -90,8 +90,10 @@ public class TuioDemo : Form, TuioListener
     {
         // Load PNG images and associate them with SymbolIDs
         //Example:
-        symbolImageMap.Add(1, Image.FromFile("./images/alligator.png"));
-        //symbolImageMap.Add(2, Image.FromFile("symbol2.png"));
+        symbolImageMap.Add(0, Image.FromFile("alligator.png"));
+        symbolImageMap.Add(1, Image.FromFile("wolf.png"));
+        symbolImageMap.Add(2, Image.FromFile("lion.png"));
+        symbolImageMap.Add(3, Image.FromFile("bear.png"));
         // ... Add more images as needed
     }
 
@@ -251,7 +253,7 @@ public class TuioDemo : Form, TuioListener
                         current_point = next_point;
                     }
                     g.FillEllipse(curBrush, current_point.getScreenX(width) - height / 100, current_point.getScreenY(height) - height / 100, height / 50, height / 50);
-                    g.DrawString(tcur.CursorID + "", font, fntBrush, new PointF(tcur.getScreenX(width) - 10, tcur.getScreenY(height) - 10));
+                    //g.DrawString(tcur.CursorID + "", font, fntBrush, new PointF(tcur.getScreenX(width) - 10, tcur.getScreenY(height) - 10));
                 }
             }
         }
@@ -265,7 +267,8 @@ public class TuioDemo : Form, TuioListener
                 {
                     int ox = tobj.getScreenX(width);
                     int oy = tobj.getScreenY(height);
-                    int size = height / 10;
+                    //before int size = height / 10;
+                    int size = (int)(height / 5); // Adjust the scaling factor here AFTER
 
                     g.TranslateTransform(ox, oy);
                     g.RotateTransform((float)(tobj.Angle / Math.PI * 180.0f));
@@ -288,7 +291,7 @@ public class TuioDemo : Form, TuioListener
                     g.RotateTransform(-1 * (float)(tobj.Angle / Math.PI * 180.0f));
                     g.TranslateTransform(-ox, -oy);
 
-                    g.DrawString(tobj.SymbolID + "", font, fntBrush, new PointF(ox - 10, oy - 10));
+                    //g.DrawString(tobj.SymbolID + "", font, fntBrush, new PointF(ox - 10, oy - 10));
                 }
             }
         }
@@ -315,7 +318,7 @@ public class TuioDemo : Form, TuioListener
                     g.RotateTransform(-1 * (float)(tblb.Angle / Math.PI * 180.0f));
                     g.TranslateTransform(-bx, -by);
 
-                    g.DrawString(tblb.BlobID + "", font, fntBrush, new PointF(bx, by));
+                    //g.DrawString(tblb.BlobID + "", font, fntBrush, new PointF(bx, by));
                 }
             }
         }
