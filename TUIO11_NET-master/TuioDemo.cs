@@ -61,11 +61,11 @@ public class TuioDemo : Form, TuioListener
     {
 
         verbose = false;
-        fullscreen = false;
+        fullscreen = true;
         width = window_width;
         height = window_height;
 
-        this.ClientSize = new System.Drawing.Size(width, height);
+        this.ClientSize = new System.Drawing.Size(screen_width, screen_height);
         this.Name = "TuioDemo";
         this.Text = "TuioDemo";
 
@@ -239,7 +239,17 @@ public class TuioDemo : Form, TuioListener
         // Getting the graphics object
         Pen borderPen = new Pen(Color.Red, 2);
         Graphics g = pevent.Graphics;
-        g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));    
+        g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+        if (fullscreen)
+        {
+            // If in fullscreen mode, fill the entire screen
+            g.FillRectangle(bgrBrush, new Rectangle(0, 0, screen_width, screen_height));
+        }
+        else
+        {
+            // If in windowed mode, fill the specified window size
+            g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+        }
         g.DrawRectangle(borderPen, 100, 100, 100, 100);
 
         // draw the cursor path
