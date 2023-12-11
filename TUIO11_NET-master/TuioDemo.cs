@@ -109,8 +109,8 @@ public class TuioDemo : Form, TuioListener
 
         // Set the size, name, and text of the form
         this.ClientSize = new System.Drawing.Size(width, height);
-        this.Name = "TuioDemo";
-        this.Text = "TuioDemo";
+        this.Name = "E-Zoo";
+        this.Text = "E-Zoo";
 
         // Event handlers for form closing and key down
         this.Closing += new CancelEventHandler(Form_Closing);
