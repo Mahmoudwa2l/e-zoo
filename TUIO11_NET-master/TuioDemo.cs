@@ -41,6 +41,8 @@ public class TuioDemo : Form, TuioListener
     private int window_top = 0;
     private int screen_width = Screen.PrimaryScreen.Bounds.Width;
     private int screen_height = Screen.PrimaryScreen.Bounds.Height;
+    private Image backgroundImage;
+
 
     private bool fullscreen;
     private bool verbose;
@@ -64,10 +66,11 @@ public class TuioDemo : Form, TuioListener
         fullscreen = true;
         width = window_width;
         height = window_height;
+        backgroundImage = Image.FromFile("zoo.png");
 
         this.ClientSize = new System.Drawing.Size(screen_width, screen_height);
-        this.Name = "TuioDemo";
-        this.Text = "TuioDemo";
+        this.Name = "E-zoo";
+        this.Text = "E-zoo";
 
         this.Closing += new CancelEventHandler(Form_Closing);
         this.KeyDown += new KeyEventHandler(Form_KeyDown);
@@ -240,16 +243,23 @@ public class TuioDemo : Form, TuioListener
         Pen borderPen = new Pen(Color.Red, 2);
         Graphics g = pevent.Graphics;
         g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
-        if (fullscreen)
+        if (backgroundImage != null)
         {
-            // If in fullscreen mode, fill the entire screen
-            g.FillRectangle(bgrBrush, new Rectangle(0, 0, screen_width, screen_height));
+            if (fullscreen)
+            {
+                // If in fullscreen mode, fill the entire screen
+                g.FillRectangle(bgrBrush, new Rectangle(0, 0, screen_width, screen_height));
+                //g.DrawImage(backgroundImage, new Rectangle(0, 0, screen_width, screen_height));
+                
+            }
+            else
+            {
+                // If in windowed mode, fill the specified window size
+                //g.DrawImage(backgroundImage, new Rectangle(0, 0, width, height));
+                g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+            }
         }
-        else
-        {
-            // If in windowed mode, fill the specified window size
-            g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
-        }
+      
         g.DrawRectangle(borderPen, 100, 100, 100, 100);
 
         // draw the cursor path
