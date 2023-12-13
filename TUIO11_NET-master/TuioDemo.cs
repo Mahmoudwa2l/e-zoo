@@ -101,6 +101,9 @@ public class TuioDemo : Form, TuioListener
         symbolImageMap.Add(1, Image.FromFile("wolf.png"));
         symbolImageMap.Add(2, Image.FromFile("lion.png"));
         symbolImageMap.Add(3, Image.FromFile("bear.png"));
+        //symbolImageMap.Add(4, Image.FromFile("flamingo.png"));
+
+        
         // ... Add more images as needed
     }
 
