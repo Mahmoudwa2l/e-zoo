@@ -1,4 +1,4 @@
-/*
+﻿/*
 	TUIO C# Demo - part of the reacTIVision project
 	Copyright (c) 2005-2016 Martin Kaltenbrunner <martin@tuio.org>
 
@@ -42,6 +42,7 @@ public class TuioDemo : Form, TuioListener
     private int screen_width = Screen.PrimaryScreen.Bounds.Width;
     private int screen_height = Screen.PrimaryScreen.Bounds.Height;
     private Image backgroundImage;
+    private Graphics g;
 
 
     private bool fullscreen;
@@ -61,6 +62,7 @@ public class TuioDemo : Form, TuioListener
 
     public TuioDemo(int port)
     {
+        g = this.CreateGraphics();
 
         verbose = false;
         fullscreen = true;
@@ -171,12 +173,49 @@ public class TuioDemo : Form, TuioListener
             objectList.Add(o.SessionID, o);
         }
         if (verbose) Console.WriteLine("add obj " + o.SymbolID + " (" + o.SessionID + ") " + o.X + " " + o.Y + " " + o.Angle);
-    }
 
+        // Call the updateTuioObject method when adding the object
+        updateTuioObject(o);
+    }
+    bool flag = true;
+
+    public void CheckIfMarkerInsideRectangle(TuioObject o, int symbolId, float rectangleX, float rectangleY, float rectangleWidth, float rectangleHeight)
+{
+    float screenX = o.X * width;
+    float screenY = o.Y * height;
+
+    if (o.SymbolID == symbolId)
+    {
+        if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
+        {
+            if (!flag)
+            {
+                Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
+                MessageBox.Show($"{o.SymbolID} entered true!");
+                flag = true; // Set flag to true when entering the rectangle
+            }
+        }
+        else
+        {
+            flag = false; // Set flag to false when outside the rectangle
+        }
+    }
+}
     public void updateTuioObject(TuioObject o)
     {
 
+        //if (verbose) Console.WriteLine("set obj " + o.SymbolID + " " + o.SessionID + " " + o.X + " " + o.Y + " " + o.Angle + " " + o.MotionSpeed + " " + o.RotationSpeed + " " + o.MotionAccel + " " + o.RotationAccel);
+
         if (verbose) Console.WriteLine("set obj " + o.SymbolID + " " + o.SessionID + " " + o.X + " " + o.Y + " " + o.Angle + " " + o.MotionSpeed + " " + o.RotationSpeed + " " + o.MotionAccel + " " + o.RotationAccel);
+        
+        //lion
+        CheckIfMarkerInsideRectangle(o, 2, 100, 200, 200, 200);
+
+        //elegator
+        CheckIfMarkerInsideRectangle(o, 1, 100, 200, 200, 200);
+
+        //wolf
+        CheckIfMarkerInsideRectangle(o, 0, 100, 200, 200, 200);
     }
 
     public void removeTuioObject(TuioObject o)
@@ -237,14 +276,40 @@ public class TuioDemo : Form, TuioListener
 
     public void refresh(TuioTime frameTime)
     {
+        //Invalidate();
+        //lock (objectList)
+        //{
+        //    foreach (var tuioObject in objectList.Values)
+        //    {
+        //        updateTuioObject(tuioObject);
+        //    }
+        //}
+
         Invalidate();
     }
+
+    public void rec(float x, float y, float h, float w, string text)
+    {
+        Pen borderPen = new Pen(Color.Red, 2);
+
+        // Draw Rectangle
+        g.DrawRectangle(borderPen, x, y, h, w);
+
+        // Draw Text below the Rectangle
+        Font textFont = new Font("Arial", 10.0f);
+        SolidBrush textBrush = new SolidBrush(Color.Black);
+
+        float textX = x + (w / 2) - (g.MeasureString(text, textFont).Width / 2);
+        float textY = y + h + 5; // Adjust the distance below the rectangle
+
+        g.DrawString(text, textFont, textBrush, new PointF(textX, textY));
+    }
+
 
     protected override void OnPaintBackground(PaintEventArgs pevent)
     {
         // Getting the graphics object
-        Pen borderPen = new Pen(Color.Red, 2);
-        Graphics g = pevent.Graphics;
+        g = pevent.Graphics;
         g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
         if (backgroundImage != null)
         {
@@ -262,8 +327,12 @@ public class TuioDemo : Form, TuioListener
                 g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
             }
         }
-      
-        g.DrawRectangle(borderPen, 100, 100, 100, 100);
+
+       rec(100,200,200,200, "Lion أسد");
+       rec(400, 200, 200, 200,"Wolf ذئب");
+       rec(700, 200, 200, 200, "elegator تمساح");
+       rec(1000, 200, 200, 200, "Wolf ذئب");
+
 
         // draw the cursor path
         if (cursorList.Count > 0)
