@@ -43,7 +43,7 @@ public class TuioDemo : Form, TuioListener
     private int screen_height = Screen.PrimaryScreen.Bounds.Height;
     private Image backgroundImage;
     private Graphics g;
-
+    public bool b; //animal entered
 
     private bool fullscreen;
     private bool verbose;
@@ -180,27 +180,53 @@ public class TuioDemo : Form, TuioListener
     bool flag = true;
 
     public void CheckIfMarkerInsideRectangle(TuioObject o, int symbolId, float rectangleX, float rectangleY, float rectangleWidth, float rectangleHeight)
-{
-    float screenX = o.X * width;
-    float screenY = o.Y * height;
-
-    if (o.SymbolID == symbolId)
     {
-        if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
+        
+        float screenX = o.X * width;
+        float screenY = o.Y * height;
+       
+
+        if (o.SymbolID == symbolId)    //for Lion
         {
-            if (!flag)
+            if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
             {
-                Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
-                MessageBox.Show($"{o.SymbolID} entered true!");
-                flag = true; // Set flag to true when entering the rectangle
+                if (!flag)
+                {
+                    Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
+
+                        //MessageBox.Show($"{o.SymbolID} entered true!");
+                        //g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+
+                        b = true; // Set flag to true when entering the rectangle
+                }
+            }
+            else
+            {
+                flag = false; // Set flag to false when outside the rectangle
             }
         }
-        else
+        if(o.SymbolID == symbolId) //for elegator
         {
-            flag = false; // Set flag to false when outside the rectangle
+            if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
+            {
+                if (!flag)
+                {
+                    Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
+
+                    //MessageBox.Show($"{o.SymbolID} entered true!");
+                    //g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                    b = true;
+
+                    flag = true; // Set flag to true when entering the rectangle
+                }
+            }
+            else
+            {
+                flag = false; // Set flag to false when outside the rectangle
+            }
+
         }
     }
-}
     public void updateTuioObject(TuioObject o)
     {
 
@@ -374,7 +400,11 @@ public class TuioDemo : Form, TuioListener
                     // Draw the PNG image based on SymbolID
                     if (symbolImageMap.ContainsKey(tobj.SymbolID))
                     {
-                        g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                        g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size, oy - size, size, size));
+                        //if(b)
+                        //{
+                        //    g.FillRectangle(objBrush, new Rectangle(10, 10, size, size));
+                        //}
                     }
                     else
                     {
