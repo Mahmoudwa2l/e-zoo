@@ -1,0 +1,30 @@
+I found the interaction with the animals using my finger intuitive and easy to understand.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The movement of the animal pictures inside the box accurately corresponded to my finger gestures.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The TUIO marker system effectively engaged me with the projected animals on the screen.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The variety of interactive elements (e.g., finger detection, TUIO markers) made the learning experience enjoyable.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+I could easily understand the purpose and functionality of the C# interface with animal images.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The inclusion of facial detection and emotion detection added value to the learning experience.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The system responded promptly to my interactions, providing a smooth and seamless experience.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+The use of sockets to send coordinates enhanced my ability to interact with the animals effectively.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+I felt confident using the interactive system, even if I had little prior experience with similar technologies.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
+Overall, I would consider this interactive learning system for children easy to use and engaging.
+
+Strongly Disagree | Disagree | Neutral | Agree | Strongly Agree
