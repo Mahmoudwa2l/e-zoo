@@ -56,6 +56,7 @@
             exitbutton.SizeMode = PictureBoxSizeMode.StretchImage;
             exitbutton.TabIndex = 1;
             exitbutton.TabStop = false;
+            exitbutton.Click += exitbutton_Click;
             exitbutton.MouseLeave += exitbutton_MouseLeave;
             exitbutton.MouseHover += exitbutton_MouseHover;
             // 
@@ -68,6 +69,7 @@
             startbutton.SizeMode = PictureBoxSizeMode.StretchImage;
             startbutton.TabIndex = 0;
             startbutton.TabStop = false;
+            startbutton.Click += startbutton_Click;
             startbutton.MouseLeave += startbutton_MouseLeave;
             startbutton.MouseHover += startbutton_MouseHover;
             // 

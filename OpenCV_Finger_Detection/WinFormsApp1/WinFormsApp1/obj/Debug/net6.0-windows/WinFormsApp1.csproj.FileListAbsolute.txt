@@ -49,3 +49,41 @@ C:\Users\hp\Desktop\HCI PROJECT\ocd-monitoring-main\ocd-monitoring-main\WinForms
 C:\Users\hp\Desktop\HCI PROJECT\ocd-monitoring-main\ocd-monitoring-main\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
 C:\Users\hp\Desktop\HCI PROJECT\ocd-monitoring-main\ocd-monitoring-main\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form2.resources
 C:\Users\hp\Desktop\HCI PROJECT\ocd-monitoring-main\ocd-monitoring-main\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form2.resources
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.sourcelink.json
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\E-Zoo\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form2.resources
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.sourcelink.json
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+C:\Users\hp\Documents\GitHub\e-zoo\OpenCV_Finger_Detection\WinFormsApp1\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll

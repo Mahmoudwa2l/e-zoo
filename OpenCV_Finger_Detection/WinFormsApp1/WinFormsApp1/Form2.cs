@@ -14,8 +14,8 @@ namespace WinFormsApp1
     public partial class Form2 : Form
     {
 
-        int flag1=0;
-        int flag2=0;
+
+
         public Form2()
         {
             InitializeComponent();
@@ -32,7 +32,10 @@ namespace WinFormsApp1
         }
         private void startbutton_Click(object sender, EventArgs e)
         {
-            flag=1;
+            this.Hide();
+            Form1 Form1 = new Form1();
+            Form1.Show();
+
         }
 
         private void startbutton_MouseLeave(object sender, EventArgs e)
@@ -47,6 +50,12 @@ namespace WinFormsApp1
         private void exitbutton_MouseLeave(object sender, EventArgs e)
         {
             exitbutton.Image = Resources.exit_normal;
+        }
+
+        private void exitbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

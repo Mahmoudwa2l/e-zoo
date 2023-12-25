@@ -80,8 +80,8 @@ namespace WinFormsApp1
             num2 = Int16.Parse(listt2);
             if (flagcol1 == true)
             {
-                move1x = num1;
-                move1y = num2;
+                move1x = num1-30;
+                move1y = num2-30;
                 if(move1x>=90 && move1y>=290&&move1x<260 &&move1y<450)
                 {
                     move1x = 100;
@@ -97,8 +97,8 @@ namespace WinFormsApp1
                 flagct1++;
                 if (flagct1 > 15)
                 {
-                    move2x = num1;
-                    move2y = num2;
+                    move2x = num1 - 30;
+                    move2y = num2 - 30;
                     if (move2x >= 290 && move2y >= 300 && move2x < 450 && move2y < 450)
                     {
                         move2x = 300;
@@ -115,8 +115,8 @@ namespace WinFormsApp1
                 flagct2++;
                 if (flagct2 > 15)
                 {
-                    move3x = num1;
-                    move3y = num2;
+                    move3x = num1 - 40;
+                    move3y = num2 - 30;
                     if (move3x >= 400 && move3y >= 300 && move3x < 600 && move3y < 450)
                     {
                         move3x = 500;
@@ -135,7 +135,7 @@ namespace WinFormsApp1
             }
             DrawDubble(this.CreateGraphics());
             //int num2 = listt2 - '0';
-            //richTextBox1.Text += num1.ToString() + '\n';
+            //richTextBox1.Text += num1.ToString() + '\n';  
         }
         void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -168,7 +168,7 @@ namespace WinFormsApp1
             }
             else { 
                 g.Clear(Color.White);
-                MessageBox.Show("GOOD JOB, YOU WIN!");
+                
                 flagwin = false;
             }
             Pen Pn = new Pen(Color.White, 2);
