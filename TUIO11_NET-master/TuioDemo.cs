@@ -1,4 +1,4 @@
-/*
+﻿/*
 	TUIO C# Demo - part of the reacTIVision project
 	Copyright (c) 2005-2016 Martin Kaltenbrunner <martin@tuio.org>
 
@@ -41,6 +41,9 @@ public class TuioDemo : Form, TuioListener
     private int window_top = 0;
     private int screen_width = Screen.PrimaryScreen.Bounds.Width;
     private int screen_height = Screen.PrimaryScreen.Bounds.Height;
+    private Image backgroundImage;
+    private Graphics g;
+    public bool b; //animal entered
 
     private bool fullscreen;
     private bool verbose;
@@ -59,15 +62,17 @@ public class TuioDemo : Form, TuioListener
 
     public TuioDemo(int port)
     {
+        g = this.CreateGraphics();
 
         verbose = false;
-        fullscreen = false;
+        fullscreen = true;
         width = window_width;
         height = window_height;
+        backgroundImage = Image.FromFile("zoo.png");
 
-        this.ClientSize = new System.Drawing.Size(width, height);
-        this.Name = "TuioDemo";
-        this.Text = "TuioDemo";
+        this.ClientSize = new System.Drawing.Size(screen_width, screen_height);
+        this.Name = "E-zoo";
+        this.Text = "E-zoo";
 
         this.Closing += new CancelEventHandler(Form_Closing);
         this.KeyDown += new KeyEventHandler(Form_KeyDown);
@@ -98,6 +103,9 @@ public class TuioDemo : Form, TuioListener
         symbolImageMap.Add(1, Image.FromFile("wolf.png"));
         symbolImageMap.Add(2, Image.FromFile("lion.png"));
         symbolImageMap.Add(3, Image.FromFile("bear.png"));
+        //symbolImageMap.Add(4, Image.FromFile("flamingo.png"));
+
+        
         // ... Add more images as needed
     }
 
@@ -165,12 +173,75 @@ public class TuioDemo : Form, TuioListener
             objectList.Add(o.SessionID, o);
         }
         if (verbose) Console.WriteLine("add obj " + o.SymbolID + " (" + o.SessionID + ") " + o.X + " " + o.Y + " " + o.Angle);
-    }
 
+        // Call the updateTuioObject method when adding the object
+        updateTuioObject(o);
+    }
+    bool flag = true;
+
+    public void CheckIfMarkerInsideRectangle(TuioObject o, int symbolId, float rectangleX, float rectangleY, float rectangleWidth, float rectangleHeight)
+    {
+        
+        float screenX = o.X * width;
+        float screenY = o.Y * height;
+       
+
+        if (o.SymbolID == symbolId)    //for Lion
+        {
+            if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
+            {
+                if (!flag)
+                {
+                    Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
+
+                        //MessageBox.Show($"{o.SymbolID} entered true!");
+                        //g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+
+                        b = true; // Set flag to true when entering the rectangle
+                }
+            }
+            else
+            {
+                flag = false; // Set flag to false when outside the rectangle
+            }
+        }
+        if(o.SymbolID == symbolId) //for elegator
+        {
+            if (screenX >= rectangleX && screenX <= rectangleX + rectangleWidth && screenY >= rectangleY && screenY <= rectangleY + rectangleHeight)
+            {
+                if (!flag)
+                {
+                    Console.WriteLine($"{o.SymbolID} entered true at X: {screenX}, Y: {screenY}!");
+
+                    //MessageBox.Show($"{o.SymbolID} entered true!");
+                    //g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                    b = true;
+
+                    flag = true; // Set flag to true when entering the rectangle
+                }
+            }
+            else
+            {
+                flag = false; // Set flag to false when outside the rectangle
+            }
+
+        }
+    }
     public void updateTuioObject(TuioObject o)
     {
 
+        //if (verbose) Console.WriteLine("set obj " + o.SymbolID + " " + o.SessionID + " " + o.X + " " + o.Y + " " + o.Angle + " " + o.MotionSpeed + " " + o.RotationSpeed + " " + o.MotionAccel + " " + o.RotationAccel);
+
         if (verbose) Console.WriteLine("set obj " + o.SymbolID + " " + o.SessionID + " " + o.X + " " + o.Y + " " + o.Angle + " " + o.MotionSpeed + " " + o.RotationSpeed + " " + o.MotionAccel + " " + o.RotationAccel);
+        
+        //lion
+        CheckIfMarkerInsideRectangle(o, 2, 100, 200, 200, 200);
+
+        //elegator
+        CheckIfMarkerInsideRectangle(o, 1, 100, 200, 200, 200);
+
+        //wolf
+        CheckIfMarkerInsideRectangle(o, 0, 100, 200, 200, 200);
     }
 
     public void removeTuioObject(TuioObject o)
@@ -231,14 +302,63 @@ public class TuioDemo : Form, TuioListener
 
     public void refresh(TuioTime frameTime)
     {
+        //Invalidate();
+        //lock (objectList)
+        //{
+        //    foreach (var tuioObject in objectList.Values)
+        //    {
+        //        updateTuioObject(tuioObject);
+        //    }
+        //}
+
         Invalidate();
     }
+
+    public void rec(float x, float y, float h, float w, string text)
+    {
+        Pen borderPen = new Pen(Color.Red, 2);
+
+        // Draw Rectangle
+        g.DrawRectangle(borderPen, x, y, h, w);
+
+        // Draw Text below the Rectangle
+        Font textFont = new Font("Arial", 10.0f);
+        SolidBrush textBrush = new SolidBrush(Color.Black);
+
+        float textX = x + (w / 2) - (g.MeasureString(text, textFont).Width / 2);
+        float textY = y + h + 5; // Adjust the distance below the rectangle
+
+        g.DrawString(text, textFont, textBrush, new PointF(textX, textY));
+    }
+
 
     protected override void OnPaintBackground(PaintEventArgs pevent)
     {
         // Getting the graphics object
-        Graphics g = pevent.Graphics;
+        g = pevent.Graphics;
         g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+        if (backgroundImage != null)
+        {
+            if (fullscreen)
+            {
+                // If in fullscreen mode, fill the entire screen
+                g.FillRectangle(bgrBrush, new Rectangle(0, 0, screen_width, screen_height));
+                //g.DrawImage(backgroundImage, new Rectangle(0, 0, screen_width, screen_height));
+                
+            }
+            else
+            {
+                // If in windowed mode, fill the specified window size
+                //g.DrawImage(backgroundImage, new Rectangle(0, 0, width, height));
+                g.FillRectangle(bgrBrush, new Rectangle(0, 0, width, height));
+            }
+        }
+
+       rec(100,200,200,200, "Lion أسد");
+       rec(400, 200, 200, 200,"Wolf ذئب");
+       rec(700, 200, 200, 200, "elegator تمساح");
+       rec(1000, 200, 200, 200, "Wolf ذئب");
+
 
         // draw the cursor path
         if (cursorList.Count > 0)
@@ -280,7 +400,11 @@ public class TuioDemo : Form, TuioListener
                     // Draw the PNG image based on SymbolID
                     if (symbolImageMap.ContainsKey(tobj.SymbolID))
                     {
-                        g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size / 2, oy - size / 2, size, size));
+                        g.DrawImage(symbolImageMap[tobj.SymbolID], new Rectangle(ox - size, oy - size, size, size));
+                        //if(b)
+                        //{
+                        //    g.FillRectangle(objBrush, new Rectangle(10, 10, size, size));
+                        //}
                     }
                     else
                     {
