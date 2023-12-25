@@ -76,4 +76,9 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TuioDemo.resx">
+      <DependentUpon>TuioDemo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

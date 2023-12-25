@@ -68,7 +68,7 @@ public class TuioDemo : Form, TuioListener
         fullscreen = true;
         width = window_width;
         height = window_height;
-        backgroundImage = Image.FromFile("zoo.png");
+        /*backgroundImage = Image.FromFile("zoo.png");*/
 
         this.ClientSize = new System.Drawing.Size(screen_width, screen_height);
         this.Name = "E-zoo";
@@ -450,6 +450,24 @@ public class TuioDemo : Form, TuioListener
                 }
             }
         }
+    }
+
+    private void InitializeComponent()
+    {
+            this.SuspendLayout();
+            // 
+            // TuioDemo
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "TuioDemo";
+            this.Load += new System.EventHandler(this.TuioDemo_Load);
+            this.ResumeLayout(false);
+
+    }
+
+    private void TuioDemo_Load(object sender, EventArgs e)
+    {
+
     }
 
     public static void Main(String[] argv)
